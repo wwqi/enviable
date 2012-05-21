@@ -1,0 +1,3 @@
+module Enviable
+  VERSION = "0.0.1"
+end

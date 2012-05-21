@@ -1,5 +1,3 @@
-require "enviable/version"
+require 'enviable/version'
+require 'enviable/environment'
 
-module Enviable
-  # Your code goes here...
-end

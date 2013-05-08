@@ -1,6 +1,33 @@
 # Enviable
 
-TODO: Write a gem description
+Enviable is a Ruby gem that acts as a wrapper for ENV.
+
+## Usage
+
+In your local env:
+
+```
+ELASTICSEARCH_URL=http://www.foo.bar
+FACEBOOK_APP_ID=123456789
+```
+
+In Ruby:
+```
+Environment.facebook_app_id
+# => "123456789"
+Environment.elasticsearch_url
+# => "http://www.foo.bar"
+Environment.eLaStIcSeArCh_uRl
+# => "http://www.foo.bar"
+Environment.merge!(elasticsearch_url: "http://www.baz.bat")
+# => nil
+Environment.elasticsearch_url
+# => "http://www.baz.bat"
+Environment.clear!
+# => nil
+Environment.elasticsearch_url
+# => "http://www.foo.bar"
+```
 
 ## Installation
 
@@ -15,10 +42,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install enviable
-
-## Usage
-
-TODO: Write usage instructions here
 
 ## Contributing
 
